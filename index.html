@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#287f91">
+<title>澎湖好好玩｜三日海島旅行手冊</title>
+<style>
+:root{
+  --sea:#287f91;--deep:#195565;--foam:#e7f4f2;--sand:#f5e8cf;--coral:#e98e73;
+  --ink:#34464a;--muted:#718287;--paper:#fffdf8;--line:#e8e2d7;--gold:#d8ad63;
+  --shadow:0 12px 34px rgba(36,83,91,.10);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#f4f7f4;color:var(--ink);font-family:ui-rounded,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.7}
+a{color:inherit}
+button{font:inherit}
+.shell{max-width:1080px;margin:auto;padding:0 22px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#d8eeeb 0%,#f7ecd7 58%,#f8d9c9 100%);padding:28px 0 54px}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.28)}
+.hero:before{width:330px;height:330px;right:-80px;top:-120px}
+.hero:after{width:190px;height:190px;left:-70px;bottom:-110px}
+.topline{display:flex;justify-content:space-between;align-items:center;gap:12px;position:relative;z-index:1}
+.brand{font-weight:900;letter-spacing:.08em;color:var(--deep)}
+.pill{font-size:12px;background:rgba(255,255,255,.65);padding:7px 12px;border-radius:99px;color:var(--deep)}
+.hero-content{position:relative;z-index:1;padding-top:42px;max-width:720px}
+.eyebrow{font-size:13px;letter-spacing:.18em;color:var(--sea);font-weight:800}
+h1{font-size:clamp(30px,5vw,52px);line-height:1.25;margin:12px 0;color:#214f5a;letter-spacing:.02em}
+.subtitle{font-size:17px;color:#587176;margin:0 0 24px}
+.hero-tags{display:flex;flex-wrap:wrap;gap:9px}
+.hero-tags span{background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.8);border-radius:99px;padding:7px 13px;font-size:13px}
+.hero-art{position:absolute;right:3%;bottom:12px;width:min(34%,340px);opacity:.92}
+.quickfacts{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:-24px;position:relative;z-index:2}
+.fact{background:var(--paper);border:1px solid #eee9df;border-radius:17px;padding:15px 17px;box-shadow:var(--shadow)}
+.fact small{display:block;color:var(--muted);font-size:12px}
+.fact strong{display:block;color:var(--deep);font-size:16px;margin-top:3px}
+.nav{position:sticky;top:0;z-index:10;background:rgba(255,253,248,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);margin-top:24px}
+.navinner{display:flex;gap:8px;overflow:auto;padding:10px 0}
+.nav a{white-space:nowrap;text-decoration:none;padding:8px 14px;border-radius:99px;font-size:13px;color:#61777a}
+.nav a:hover,.nav a.active{background:var(--foam);color:var(--deep);font-weight:800}
+main{padding:34px 0 70px}
+.section{margin:0 0 42px;scroll-margin-top:84px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:17px}
+.kicker{font-size:12px;color:var(--coral);font-weight:900;letter-spacing:.16em}
+h2{margin:2px 0 0;font-size:25px;color:var(--deep)}
+.section-note{font-size:13px;color:var(--muted)}
+.daytabs{display:flex;gap:9px;margin:0 0 14px;flex-wrap:wrap}
+.daytab{border:1px solid var(--line);background:var(--paper);color:#607579;padding:9px 17px;border-radius:99px;cursor:pointer}
+.daytab.active{background:var(--sea);border-color:var(--sea);color:white;font-weight:800}
+.daypanel{display:none}
+.daypanel.active{display:block}
+.daybanner{border-radius:20px;padding:20px 23px;background:linear-gradient(110deg,#dcefeb,#f7eddb);display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:15px}
+.daybanner h3{font-size:21px;margin:0;color:var(--deep)}
+.daybanner p{margin:4px 0 0;color:#60777a;font-size:13px}
+.daynum{font-size:37px;font-weight:900;color:rgba(40,127,145,.23)}
+.timeline{position:relative;padding-left:24px}
+.timeline:before{content:"";position:absolute;left:8px;top:9px;bottom:12px;width:2px;background:#d5e8e5}
+.stop{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin:0 0 12px;box-shadow:0 5px 18px rgba(40,80,85,.045)}
+.stop:before{content:"";position:absolute;left:-22px;top:23px;width:11px;height:11px;border-radius:50%;background:var(--coral);border:3px solid #f4f7f4}
+.stoptop{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.stop h4{margin:0;color:var(--deep);font-size:17px}
+.kind{font-size:11px;color:#a16d4d;background:#fff0e7;border-radius:99px;padding:4px 9px;white-space:nowrap}
+.stop p{margin:7px 0 0;color:#65777a;font-size:14px}
+.maplink{display:inline-block;margin-top:8px;color:var(--sea);font-size:13px;text-decoration:none;font-weight:800}
+.meals{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+.meal{background:#fff8ec;border:1px solid #f0e2c8;padding:9px 12px;border-radius:12px;font-size:13px}
+.meal b{color:#a66d3d}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:19px;box-shadow:0 6px 22px rgba(40,80,85,.045)}
+.card h3{margin:0 0 12px;color:var(--deep);font-size:17px}
+.detail{display:flex;justify-content:space-between;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14px}
+.detail:last-child{border:0}.detail span:first-child{color:var(--muted)}.detail strong{text-align:right}
+.call{color:var(--sea);text-decoration:none;font-weight:800}
+.notice{background:#fff4e9;border:1px solid #f1dfc9;border-radius:15px;padding:14px 16px;font-size:14px;color:#795d48;margin-top:13px}
+.notice strong{color:#a35d3d}
+.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}
+.checkitem{display:flex;align-items:flex-start;gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:14px;cursor:pointer}
+.checkitem input{accent-color:var(--sea);margin-top:5px;width:16px;height:16px;flex:none}
+.checkitem:has(input:checked) span{text-decoration:line-through;color:#9aa7a7}
+.progresswrap{background:#e4eeeb;border-radius:99px;height:9px;overflow:hidden;margin:12px 0 5px}
+.progress{height:100%;width:0;background:var(--sea);border-radius:99px;transition:width .2s}
+.progresslabel{font-size:12px;color:var(--muted)}
+.callgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.callcard{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:15px}
+.callcard small{color:var(--muted);display:block}.callcard strong{display:block;margin:5px 0;color:var(--deep)}
+.callcard a{color:var(--sea);font-weight:900;text-decoration:none}
+footer{background:#e4f0ed;text-align:center;padding:28px 20px;color:#688084;font-size:13px}
+footer strong{color:var(--deep)}
+.source{font-size:12px;color:#8a9999;margin-top:12px}
+@media(max-width:700px){
+ .shell{padding:0 16px}.hero{padding-top:19px}.hero-content{padding-top:34px}.hero-art{width:42%;right:-4%;bottom:2px;opacity:.45}
+ .quickfacts{grid-template-columns:repeat(2,1fr);gap:9px}.fact{padding:12px}
+ .info-grid,.checklist{grid-template-columns:1fr}.callgrid{grid-template-columns:1fr}
+ .section-head{display:block}.section-note{margin-top:5px}.daybanner{padding:17px}
+}
+@media print{
+ .nav,.daytabs,.hero-art{display:none!important}.hero{padding:20px}.quickfacts{margin-top:12px}
+ .daypanel{display:block!important;page-break-inside:avoid}.section{page-break-inside:avoid}
+ body{background:white}.stop,.card,.fact{box-shadow:none}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+ <div class="shell">
+  <div class="topline"><div class="brand">✳ COLATOUR TRIP NOTE</div><div class="pill">島嶼慢慢走・三天兩夜</div></div>
+  <div class="hero-content">
+   <div class="eyebrow">PENGHU · ISLAND ESCAPE</div>
+   <h1>澎湖好好玩，<br>一起去吹海風！</h1>
+   <p class="subtitle">探訪秘密島嶼・全覽南北環島・奎壁地質奇景・海味澎派火鍋</p>
+   <div class="hero-tags"><span>📅 2026.11.16 — 11.18</span><span>✈️ 台中出發</span><span>🌊 三日環島</span></div>
+  </div>
+  <svg class="hero-art" viewBox="0 0 360 230" role="img" aria-label="海島、太陽與海浪插畫">
+   <circle cx="260" cy="62" r="35" fill="#efbd72"/>
+   <path d="M0 147 Q55 116 112 145 T225 142 T360 138 L360 230 L0 230Z" fill="#83c5c1"/>
+   <path d="M0 174 Q55 145 112 174 T225 170 T360 167" fill="none" stroke="#fff8e9" stroke-width="8" stroke-linecap="round"/>
+   <path d="M0 200 Q55 171 112 200 T225 196 T360 193" fill="none" stroke="#d2ece4" stroke-width="7" stroke-linecap="round"/>
+   <path d="M65 145 L112 76 L162 145Z" fill="#f2d9ac"/><path d="M90 145 L112 76 L135 145Z" fill="#d3b98d"/>
+   <path d="M150 145 L190 96 L232 145Z" fill="#e8c99b"/>
+   <path d="M183 145 Q195 123 208 145" fill="none" stroke="#fff8e9" stroke-width="5"/>
+   <path d="M32 112 Q48 94 63 112 M43 122 Q56 109 69 122" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+   <path d="M286 120 q14 -16 28 0 q14 -16 28 0" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+  </svg>
+ </div>
+</header>
+<div class="shell">
+ <div class="quickfacts">
+  <div class="fact"><small>集合時間</small><strong>11/16 09:45</strong></div>
+  <div class="fact"><small>去程航班</small><strong>AE785 · 10:45</strong></div>
+  <div class="fact"><small>回程航班</small><strong>AE792 · 17:35</strong></div>
+  <div class="fact"><small>住宿</small><strong>Ocean Hotel × 2晚</strong></div>
+ </div>
+</div>
+<nav class="nav"><div class="shell navinner">
+ <a href="#itinerary" class="active">每日行程</a><a href="#transport">航班與住宿</a><a href="#checklist">行李清單</a><a href="#reminders">旅行提醒</a><a href="#contacts">聯絡資訊</a>
+</div></nav>
+<main class="shell">
+<section class="section" id="itinerary">
+ <div class="section-head"><div><div class="kicker">THREE DAYS IN PENGHU</div><h2>每天都要玩得剛剛好 ☀️</h2></div><div class="section-note">行程順序可能依天候、船班及現場狀況調整</div></div>
+ <div class="daytabs" role="tablist">
+  <button class="daytab active" data-day="0">Day 1・南環島</button>
+  <button class="daytab" data-day="1">Day 2・古蹟跳島</button>
+  <button class="daytab" data-day="2">Day 3・北環島</button>
+ </div>
+ <div class="daypanel active" id="day0">
+  <div class="daybanner"><div><h3>Day 1｜抵達澎湖・南環島之旅</h3><p>11/16（一）・台中 → 澎湖</p></div><div class="daynum">01</div></div>
+  <div class="timeline">
+   <article class="stop"><div class="stoptop"><h4>✈️ 台中清泉崗機場 → 澎湖</h4><span class="kind">搭機</span></div><p>華信航空 AE785｜10:45 起飛，11:30 抵達。請於 09:45 前至國內航廈華信航空團體櫃台集合報到。</p></article>
+   <article class="stop"><div class="stoptop"><h4>🏡 南寮古厝</h4><span class="kind">聚落巡禮</span></div><p>走進澎湖傳統聚落，感受石砌古厝與島嶼生活風景。</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=南寮古厝+澎湖">查看地圖 ↗</a></article>
+   <article class="stop"><div class="stoptop"><h4>🟡 南寮彩色浮球</h4><span class="kind">拍照景點</span></div><p>繽紛浮球妝點聚落，是很有澎湖味的拍照打卡點。</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=南寮彩色浮球">查看地圖 ↗</a></article>
+   <article class="stop"><div class="stoptop"><h4>🌊 奎壁山地質公園</h4><span class="kind">自然奇景</span></div><p>欣賞海岸地形與潮間帶景觀。實際能否觀賞摩西分海，需視當日潮汐與天候而定，請依導遊安排。</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=奎壁山地質公園">查看地圖 ↗</a></article>
+   <article class="stop"><div class="stoptop"><h4>🚐 南環島之旅</h4><span class="kind">環島景點</span></div><p>鎖港・山水沙灘・嵵裡沙灘・風櫃洞・貝殼教堂。</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=澎湖南環島">查看地圖 ↗</a></article>
+   <article class="stop"><div class="stoptop"><h4>🍲 澎湖海鮮火鍋套餐</h4><span class="kind">晚餐</span></div><p>晚餐安排海鮮火鍋套餐，每人 450 元。</p></article>
+  </div>
+  <div class="meals"><div class="meal"><b>早餐</b>　敬請自理</div><div class="meal"><b>午餐</b>　敬請自理</div><div class="meal"><b>晚餐</b>　海鮮火鍋（每人 $450）</div></div>
+ </div>
+ <div class="daypanel" id="day1">
+  <div class="daybanner"><div><h3>Day 2｜媽宮古蹟・金色雙島跳島趣</h3><p>11/17（二）・澎湖慢慢玩</p></div><div class="daynum">02</div></div>
+  <div class="timeline">
+   <article class="stop"><div class="stoptop"><h4>🏛️ 媽宮城古蹟之旅</h4><span class="kind">古蹟巡禮</span></div><p>四眼井・天后宮・萬軍井・中央老街。走訪馬公老城區，感受澎湖歷史與街巷風情。</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=澎湖中央老街">查看地圖 ↗</a></article>
+   <article class="stop"><div class="stoptop"><h4>🚤 金色雙島跳島趣</h4><span class="kind">搭船活動</span></div><p>桶盤・虎井。開船日期可能依搭船人數及海象調整，行程順序也可能改至第一天或第三天。</p><p>若當日搭船未達 15 人或風浪過大無法開船，改為冬季版海洋牧場活動，並每人退費 100 元。</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=桶盤嶼+澎湖">桶盤地圖 ↗</a>　<a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=虎井嶼+澎湖">虎井地圖 ↗</a></article>
+   <article class="stop"><div class="stoptop"><h4>🛍️ PIER3 購物商場</h4><span class="kind">購物逛逛</span></div><p>免稅商店將視行程時間安排，若時間不允許，可能無法前往。</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=PIER3+澎湖">查看地圖 ↗</a></article>
+  </div>
+  <div class="meals"><div class="meal"><b>早餐</b>　飯店早餐</div><div class="meal"><b>午餐</b>　澎湖風味合菜（每人 $300）</div><div class="meal"><b>晚餐</b>　敬請自理</div></div>
+ </div>
+ <div class="daypanel" id="day2">
+  <div class="daybanner"><div><h3>Day 3｜北環島・滿載回憶回家</h3><p>11/18（三）・澎湖 → 台中</p></div><div class="daynum">03</div></div>
+  <div class="timeline">
+   <article class="stop"><div class="stoptop"><h4>🌳 通樑古榕</h4><span class="kind">北環島</span></div><p>欣賞枝葉繁茂的老榕樹，感受澎湖自然與人文景觀。</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=通樑古榕">查看地圖 ↗</a></article>
+   <article class="stop"><div class="stoptop"><h4>🌉 澎湖跨海大橋</h4><span class="kind">地標景點</span></div><p>澎湖經典地標，記得留下海島旅行合照。</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=澎湖跨海大橋">查看地圖 ↗</a></article>
+   <article class="stop"><div class="stoptop"><h4>📸 小池角雙曲橋</h4><span class="kind">拍照景點</span></div><p>海面與雙曲橋交織出的療癒風景。</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=小池角雙曲橋">查看地圖 ↗</a></article>
+   <article class="stop"><div class="stoptop"><h4>🪨 大菓葉玄武岩</h4><span class="kind">地質景觀</span></div><p>欣賞壯觀的柱狀玄武岩地形。</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=大菓葉玄武岩">查看地圖 ↗</a></article>
+   <article class="stop"><div class="stoptop"><h4>🏘️ 二崁聚落</h4><span class="kind">傳統聚落</span></div><p>漫步古厝聚落，感受澎湖傳統建築與生活文化。</p><a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=二崁聚落">查看地圖 ↗</a></article>
+   <article class="stop"><div class="stoptop"><h4>🎁 土特產巡禮</h4><span class="kind">伴手禮</span></div><p>黑糖糕、漁業加工食品等澎湖特色伴手禮。</p></article>
+   <article class="stop"><div class="stoptop"><h4>✈️ 澎湖機場 → 台中清泉崗</h4><span class="kind">返家</span></div><p>華信航空 AE792｜17:35 起飛，18:15 抵達台中。</p></article>
+  </div>
+  <div class="meals"><div class="meal"><b>早餐</b>　飯店早餐</div><div class="meal"><b>午餐</b>　澎湖小管麵線（每人 $150）</div><div class="meal"><b>晚餐</b>　敬請自理</div></div>
+ </div>
+ <div class="notice">🌦️ <strong>小提醒：</strong>每日行程順序可能因班機、天候、潮汐、船班及現場狀況調整；離島活動若異動，請以當地導遊通知及實際安排為準。</div>
+</section>
+
+<section class="section" id="transport">
+ <div class="section-head"><div><div class="kicker">FLIGHT & STAY</div><h2>交通與住宿資訊 🧳</h2></div></div>
+ <div class="info-grid">
+  <div class="card"><h3>✈️ 去程｜11/16（一）</h3>
+   <div class="detail"><span>航空公司</span><strong>華信航空</strong></div><div class="detail"><span>航班</span><strong>AE785</strong></div><div class="detail"><span>起飛 → 抵達</span><strong>10:45 → 11:30</strong></div><div class="detail"><span>集合時間</span><strong>09:45 前</strong></div><div class="detail"><span>集合地點</span><strong>台中清泉崗機場國內航廈<br>華信航空團體櫃台</strong></div>
+  </div>
+  <div class="card"><h3>✈️ 回程｜11/18（三）</h3>
+   <div class="detail"><span>航空公司</span><strong>華信航空</strong></div><div class="detail"><span>航班</span><strong>AE792</strong></div><div class="detail"><span>起飛 → 抵達</span><strong>17:35 → 18:15</strong></div><div class="detail"><span>抵達機場</span><strong>台中清泉崗機場</strong></div>
+  </div>
+  <div class="card"><h3>🏨 住宿｜連住兩晚</h3>
+   <div class="detail"><span>飯店</span><strong>澎湖海洋渡假村 Ocean Hotel</strong></div><div class="detail"><span>電話</span><strong><a class="call" href="tel:069273888">06-9273888</a></strong></div><div class="detail"><span>入住</span><strong>11/16</strong></div><div class="detail"><span>退房</span><strong>11/18</strong></div>
+   <div class="notice">飯店配合環保政策，不提供一次性備品；僅提供大瓶裝洗髮精、沐浴乳。請自行準備牙刷、牙膏等個人用品。</div>
+  </div>
+  <div class="card"><h3>🎫 團體資訊</h3>
+   <div class="detail"><span>旅行團團號</span><strong>WPB111603AE6X</strong></div><div class="detail"><span>當地導遊</span><strong>當地導遊全程服務</strong></div><div class="detail"><span>導遊小費</span><strong>每人共 $300</strong></div><div class="detail"><span>收取時間</span><strong>預計行程最後一日</strong></div>
+   <p class="source">本島出發不派隨團領隊；抵達澎湖提領行李後，請找持「可樂旅遊」牌子的接待人員。</p>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="checklist">
+ <div class="section-head"><div><div class="kicker">PACKING LIST</div><h2>出發前行李檢查 ✔</h2></div><div class="section-note">勾選狀態會保留在目前這台裝置的瀏覽器</div></div>
+ <div class="card">
+  <h3>📄 證件與重要物品</h3>
+  <div class="checklist">
+   <label class="checkitem"><input type="checkbox"><span>身分證正本（或有效替代證件）</span></label>
+   <label class="checkitem"><input type="checkbox"><span>健保卡（建議備用）</span></label>
+   <label class="checkitem"><input type="checkbox"><span>手機、充電線</span></label>
+   <label class="checkitem"><input type="checkbox"><span>行動電源（僅能隨身攜帶）</span></label>
+   <label class="checkitem"><input type="checkbox"><span>現金（含導遊小費每人 $300）</span></label>
+   <label class="checkitem"><input type="checkbox"><span>飯店訂房代表人身分證（辦理入住）</span></label>
+  </div>
+  <h3 style="margin-top:20px">🧢 衣物與日用品</h3>
+  <div class="checklist">
+   <label class="checkitem"><input type="checkbox"><span>換洗衣物、外套</span></label>
+   <label class="checkitem"><input type="checkbox"><span>雨具（雨傘／輕便雨衣）</span></label>
+   <label class="checkitem"><input type="checkbox"><span>帽子、防曬用品</span></label>
+   <label class="checkitem"><input type="checkbox"><span>個人盥洗用品（牙刷、牙膏等）</span></label>
+   <label class="checkitem"><input type="checkbox"><span>泳裝（如有需要）</span></label>
+   <label class="checkitem"><input type="checkbox"><span>個人特殊用藥、暈船藥</span></label>
+   <label class="checkitem"><input type="checkbox"><span>感冒藥、止痛藥及慢性病用藥</span></label>
+   <label class="checkitem"><input type="checkbox"><span>環保餐具／水壺（建議自備）</span></label>
+  </div>
+  <div class="progresswrap"><div class="progress" id="progress"></div></div><div class="progresslabel" id="progresslabel">已完成 0 項</div>
+ </div>
+</section>
+
+<section class="section" id="reminders">
+ <div class="section-head"><div><div class="kicker">TRAVEL TIPS</div><h2>出發前一定要知道 🌼</h2></div></div>
+ <div class="info-grid">
+  <div class="card"><h3>🛫 報到與行李規定</h3>
+   <div class="detail"><span>報到</span><strong>11/16 09:45 前</strong></div><div class="detail"><span>託運行李</span><strong>每人 1 件，限重 10 kg</strong></div><div class="detail"><span>手提行李</span><strong>每人 1 件，限重 7 kg</strong></div><div class="detail"><span>隨身液體</span><strong>總量不超過 2,000 ml<br>單瓶不超過 500 ml</strong></div>
+   <div class="notice">國內線報到與行李托運為不同櫃台，請先報到再自掛行李；若不熟悉流程，請向現場人員詢問。超重費約每公斤 $15–25 元。</div>
+  </div>
+  <div class="card"><h3>🔋 行動電源與電池</h3>
+   <ul style="padding-left:20px;margin:0;font-size:14px"><li>行動電源、鋰電池手持電扇等，須有完整標示及合格標章。</li><li>電池類物品限隨身攜帶，不可託運。</li><li>航程中禁止使用行動電源。</li><li>行動電源不可放置於座椅上方置物櫃。</li></ul>
+  </div>
+  <div class="card"><h3>🪪 證件與報到提醒</h3>
+   <ul style="padding-left:20px;margin:0;font-size:14px"><li>成人請攜帶身分證正本；也可依旅行社須知攜帶駕照或健保卡等有效證件。</li><li>14 歲以下孩童請攜帶健保卡（可無照片）。</li><li>外籍旅客請攜帶開票時提供的證件正本（護照或居留證）。</li><li>抵達澎湖後，提領行李出關請找「可樂旅遊」接機牌。</li></ul>
+  </div>
+  <div class="card"><h3>🌦️ 天候、交通與行程</h3>
+   <ul style="padding-left:20px;margin:0;font-size:14px"><li>澎湖離島行程可能因天候異動或取消，請配合當地導遊安排。</li><li>跳島船班可能因海象及人數調整；未達 15 人或風浪過大時，改冬季版海洋牧場並退費每人 $100。</li><li>當地為合團合車，可能每日更換遊覽車，下車請帶走貴重物品。</li><li>班機、餐食及景點順序可能前後調整，請以現場通知為準。</li></ul>
+  </div>
+  <div class="card"><h3>💊 健康與住宿</h3>
+   <ul style="padding-left:20px;margin:0;font-size:14px"><li>離島醫療條件較不完善，請備妥暈船藥、感冒藥、止痛藥及慢性病用藥，多準備幾天份量。</li><li>飯店以訂房代表人的身分證辦理入住。</li><li>房型、樓層等特殊需求視飯店現場房況而定。</li><li>飯店多禁止室內吸菸，違規罰鍰由個人負擔。</li></ul>
+  </div>
+  <div class="card"><h3>💰 小費與費用</h3>
+   <div class="detail"><span>導遊／司機小費</span><strong>每人每日 $100 × 3 天</strong></div><div class="detail"><span>三日合計</span><strong>$300／人</strong></div>
+   <p style="font-size:13px;color:var(--muted)">預計行程最後一日收取。若遇停航滯留當地，旅行社建議另付每人每日 $100 × 滯留天數。</p>
+  </div>
+ </div>
+ <div class="notice">🚍 國內線團體機位無法選位，機上不提供餐食；若同行者無法同坐，請於機上與其他旅客協調換位。回程接機家人可先電詢清泉崗機場旅客服務中心確認抵達時間。</div>
+</section>
+
+<section class="section" id="contacts">
+ <div class="section-head"><div><div class="kicker">USEFUL CONTACTS</div><h2>重要聯絡電話 ☎️</h2></div><div class="section-note">手機點選電話即可撥打</div></div>
+ <div class="callgrid">
+  <div class="callcard"><small>機場送機服務專線</small><strong>抵達機場時主動聯絡</strong><a href="tel:0980664161">0980-664-161 ↗</a></div>
+  <div class="callcard"><small>澎湖當地緊急聯絡人</small><strong>澎湖感恩旅遊・呂小姐</strong><a href="tel:069276838">06-9276838 ↗</a><br><a href="tel:0928328500">0928-328-500 ↗</a></div>
+  <div class="callcard"><small>住宿飯店</small><strong>Ocean Hotel</strong><a href="tel:069273888">06-9273888 ↗</a></div>
+  <div class="callcard"><small>台中清泉崗機場</small><strong>旅客服務中心</strong><a href="tel:0426155029">04-2615-5029 ↗</a></div>
+ </div>
+ <p class="source">旅行社官方行程頁：<a href="https://tour.colatour.com.tw/itinerary?TourCode=WPB111603AE6X&TourDate=2026%2f11%2f16&HotelList=1" target="_blank" rel="noopener">WPB111603AE6X 行程資訊 ↗</a></p>
+</section>
+</main>
+<footer><strong>澎湖好好玩・三日小旅行</strong><br>把海風、陽光和美好回憶，一起打包帶回家 ♡<br><span class="source">本頁依旅行社提供之行程表及注意事項整理；實際安排與規定以旅行社、航空公司及現場公告為準。</span></footer>
+<script>
+const tabs=[...document.querySelectorAll('.daytab')], panels=[...document.querySelectorAll('.daypanel')];
+tabs.forEach((tab)=>tab.addEventListener('click',()=>{
+  const n=Number(tab.dataset.day);
+  tabs.forEach((t,i)=>t.classList.toggle('active',i===n));
+  panels.forEach((p,i)=>p.classList.toggle('active',i===n));
+}));
+const boxes=[...document.querySelectorAll('.checkitem input')];
+const key='penghu-trip-checklist-2026';
+try{const saved=JSON.parse(localStorage.getItem(key)||'[]');boxes.forEach((b,i)=>b.checked=!!saved[i]);}catch(e){}
+function updateProgress(){
+ const done=boxes.filter(b=>b.checked).length;
+ document.getElementById('progress').style.width=(done/boxes.length*100)+'%';
+ document.getElementById('progresslabel').textContent=`已完成 ${done} / ${boxes.length} 項`;
+ try{localStorage.setItem(key,JSON.stringify(boxes.map(b=>b.checked)));}catch(e){}
+}
+boxes.forEach(b=>b.addEventListener('change',updateProgress));updateProgress();
+const navLinks=[...document.querySelectorAll('.nav a')];
+navLinks.forEach(a=>a.addEventListener('click',()=>{navLinks.forEach(x=>x.classList.remove('active'));a.classList.add('active')}));
+</script>
+</body>
+</html>
